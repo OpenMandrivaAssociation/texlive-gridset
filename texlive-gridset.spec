@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/gridset
+# catalog-date 2009-11-09 22:36:07 +0100
+# catalog-license lppl
+# catalog-version 0.1
 Name:		texlive-gridset
 Version:	0.1
 Release:	1
@@ -49,6 +55,7 @@ solution.
 %doc %{_texmfdistdir}/source/latex/gridset/README
 %doc %{_texmfdistdir}/source/latex/gridset/gridset.dtx
 %doc %{_texmfdistdir}/source/latex/gridset/gridset.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -59,3 +66,5 @@ solution.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
