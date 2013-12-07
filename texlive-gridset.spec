@@ -6,7 +6,7 @@
 # catalog-version 0.1
 Name:		texlive-gridset
 Version:	0.1
-Release:	4
+Release:	5
 Summary:	Grid, a.k.a. in-register, setting
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/gridset
