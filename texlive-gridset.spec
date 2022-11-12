@@ -1,19 +1,13 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/gridset
-# catalog-date 2009-11-09 22:36:07 +0100
-# catalog-license lppl
-# catalog-version 0.1
 Name:		texlive-gridset
-Version:	0.1
-Release:	12
+Version:	53762
+Release:	1
 Summary:	Grid, a.k.a. in-register, setting
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/gridset
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gridset.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gridset.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gridset.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gridset.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gridset.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gridset.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -31,42 +25,27 @@ gridset is only one more step for grid setting, not a complete
 solution.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/gridset/gridset.sty
-%doc %{_texmfdistdir}/doc/latex/gridset/gridset.pdf
+%{_texmfdistdir}/tex/latex/gridset
+%doc %{_texmfdistdir}/doc/latex/gridset
 #- source
-%doc %{_texmfdistdir}/source/latex/gridset/README
-%doc %{_texmfdistdir}/source/latex/gridset/gridset.dtx
-%doc %{_texmfdistdir}/source/latex/gridset/gridset.ins
+%doc %{_texmfdistdir}/source/latex/gridset
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.1-2
-+ Revision: 752448
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.1-1
-+ Revision: 718586
-- texlive-gridset
-- texlive-gridset
-- texlive-gridset
-- texlive-gridset
-
