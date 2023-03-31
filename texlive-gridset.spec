@@ -1,6 +1,6 @@
 Name:		texlive-gridset
 Version:	53762
-Release:	1
+Release:	2
 Summary:	Grid, a.k.a. in-register, setting
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/gridset
