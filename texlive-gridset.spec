@@ -3,7 +3,7 @@ Version:	72056
 Release:	1
 Summary:	Grid, a.k.a. in-register, setting
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/gridset
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/gridset
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gridset.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gridset.doc.r%{version}.tar.xz
